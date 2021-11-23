@@ -72,3 +72,41 @@ describe("checks that tests are testing", () => {
     })
 })
 ```
+
+8. Run the tests, push your test to GitHub
+
+9. Find your `App.test.js` (comes shipped with CRA). Make it fail, e.g., by setting `screen.getByTestId('counter-butt')`. You can read [RTL docs](https://testing-library.com/docs/react-testing-library/intro/) for ideas on what your UI elements might be and how to test for them.
+
+10. Make your `App.test.js` pass.
+
+11. Experiment with [Snapshots](https://jestjs.io/docs/snapshot-testing).
+
+First, you will need to install a snapshot renderer:
+
+```bash
+yarn add react-test-renderer
+```
+
+Then you can write your first snapshot test, e.g.,
+
+```js
+import React from 'react';
+import renderer from 'react-test-renderer';
+
+import App from './App';
+
+test("that DOM renders consistently", () => {
+    const tree = renderer.create(<App/>).toJSON();
+    expect(tree).toMatchSnapshot();
+})
+```
+
+Make changes to your `App.js`. Run tests. If you want to fix the tests press `u`. If, on the other hand you did something wrong to the DOM you can fix your code.
+
+12. Making a Component. Create a folder called `components`. Make a `Counter.js` component. You can find the code in the repo or make your own to start with.
+
+13. Check `Counter.test.js` for to see how to fake a click. You can use the ideas from that test or write your own using [RTL docs](https://testing-library.com/docs/react-testing-library/intro/).
+
+14. Sign up or Login to [Netlify](https://www.netlify.com/). Deploy the app.
+
+15. Go to Actions and choose the Action build the pipeline. You may copy the yaml from this repo to set up an Action.
