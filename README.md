@@ -1,25 +1,34 @@
-# Getting Started with Create React App
+# Code along: "different types of testing for people who do or do not know JS"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Bootstrap a CRA project with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+```bash
+npx create-react-app your-app-name 
+```
 
-In the project directory, you can run:
+> npx will run Node without any global installs
 
-### `yarn start`
+2. Navigate to your new CRA project and open it in [VSCode](https://vscode.dev/):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+cd your-app-name
+code .
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+>[yarn](https://classic.yarnpkg.com/en/) is better. But if you do not have yarn you can npm everything. Watch out for some syntax variations
 
-### `yarn test`
+## To run your CRA app locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+yarn start
+```
 
-### `yarn build`
+## To test your CRA app locally
+
+```bash
+yarn test
+```
+
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
